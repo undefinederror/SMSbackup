@@ -42,7 +42,7 @@ namespace SMSbackup
             };
             btnPush.Click += delegate
             {
-                req = GetHttpReq.Create(input_url.Text, "vinz", "ti1pfv@OC!");
+                req = GetHttpReq.Create(input_url.Text, "vinz", "");
                 req.pushDB();
                 
             };
