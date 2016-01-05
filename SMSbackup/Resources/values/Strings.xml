@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="btn_checkConnection">Check Connection</string>
-    <string name="ApplicationName">SMSbackup</string>
+  <string name="btn_checkConnection">Check Connection</string>
+  <string name="btn_pushDB">Push SMS db</string>
+  <string name="ApplicationName">SMSbackup</string>
 </resources>

@@ -23,7 +23,7 @@ namespace SMSbackup
             // Define the HTTP method.
             httpGetRequest.Method = WebRequestMethods.Http.Get;
             // Specify the request for source code.
-            httpGetRequest.Headers.Add(@"Translate", "F");
+            httpGetRequest.SendChunked = true;
 
             return httpGetRequest;
         }

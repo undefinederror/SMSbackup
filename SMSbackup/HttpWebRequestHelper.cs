@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
+using System.IO;
 
 namespace SMSbackup
 {
@@ -14,6 +15,8 @@ namespace SMSbackup
             var connectionResp = new CheckConnectionResponse();
             var meth = req.Method;
             req.Method = WebRequestMethods.Http.Head;
+            req.Headers.Add(@"Translate", "F");
+            
 
             try
             {
@@ -27,6 +30,8 @@ namespace SMSbackup
                     connectionResp.Connected = false;
                     connectionResp.Message = res.StatusDescription;
                 }
+               
+                res.Close();
  
             }
             catch (Exception ex) {
@@ -35,8 +40,36 @@ namespace SMSbackup
             }
 
             req.Method = meth;
+            
             return connectionResp;
             
+        }
+        public static void pushDB(this HttpWebRequest req){
+            req.Method = WebRequestMethods.Http.Put;
+            req.Headers.Add(@"Overwrite", @"T");
+            //req.ContentLength = 3;
+            //var smsdbUri = Android.Provider.Telephony.MmsSms.ContentUri;
+            string smsdb = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.Path, "Tmp/t.txt");
+            //string smsdb ="/data/data/com.android.providers.telephony/databases/mmssms.db";
+            var sr = new StreamReader(smsdb,Encoding.UTF8);
+            string dbfile = sr.ReadToEnd();
+            req.ContentLength = dbfile.Length;
+
+            
+            //req.SendChunked = true;
+
+            Stream reqStream = req.GetRequestStream();
+            reqStream.Write(Encoding.UTF8.GetBytes(dbfile.ToCharArray()),0,(int)sr.BaseStream.Length);
+
+            reqStream.Close();
+
+            HttpWebResponse reqResp = (HttpWebResponse)req.GetResponse();
+            
+
+            
+        
+        
+        
         }
     }
     public class CheckConnectionResponse 
