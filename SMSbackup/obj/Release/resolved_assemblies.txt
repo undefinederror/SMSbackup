@@ -1,0 +1,8 @@
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\android\assets\SMSbackup.dll
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\android\assets\Mono.Android.dll
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\android\assets\mscorlib.dll
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\android\assets\System.Core.dll
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\android\assets\System.dll
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\android\assets\System.Xml.dll
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\android\assets\System.Runtime.Serialization.dll
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\android\assets\System.ServiceModel.Internals.dll

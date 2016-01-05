@@ -1,0 +1,15 @@
+D:\dev\android\SMSbackup\SMSbackup\bin\Release\SMSbackup.dll
+D:\dev\android\SMSbackup\SMSbackup\bin\Release\SMSbackup.pdb
+D:\dev\android\SMSbackup\SMSbackup\bin\Release\SMSbackup.SMSbackup.apk
+D:\dev\android\SMSbackup\SMSbackup\bin\Release\SMSbackup.SMSbackup-Signed.apk
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\SMSbackup.csprojResolveAssemblyReference.cache
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\SMSbackup.dll
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\SMSbackup.pdb
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\android\bin\SMSbackup.SMSbackup.apk
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\res\layout\main.xml
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\res\values\strings.xml
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\res\drawable\icon.png
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\R.cs.flag
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\uploadflags.txt
+D:\dev\android\SMSbackup\SMSbackup\obj\Release\SMSbackup.dll.mdb
+D:\dev\android\SMSbackup\SMSbackup\bin\Release\SMSbackup.dll.mdb
