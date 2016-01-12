@@ -25,4 +25,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_pushDB"
         android:visibility="invisible" />
+    <Button
+        android:text="push db only"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_pushOnly" />
 </LinearLayout>

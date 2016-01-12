@@ -29,6 +29,7 @@ namespace SMSbackup
             // and attach an event to it
             Button btnCheck = FindViewById<Button>(Resource.Id.btn_checkConnection);
             Button btnPush = FindViewById<Button>(Resource.Id.btn_pushDB);
+            Button btnPushOnly = FindViewById<Button>(Resource.Id.btn_pushOnly);
             // input_url = FindViewById<TextAlignment> 
             EditText input_url = FindViewById<EditText>(Resource.Id.input_url);
             
@@ -111,6 +112,40 @@ namespace SMSbackup
                     }
                 }
                 btnPush.Text = string.Format("{0} => {1}", isGood, msg);
+            };
+            btnPushOnly.Click += async delegate
+            {
+                HttpResponseMessage res;
+                bool isGood;
+                string msg;
+                string localsmsdb = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.Path, "dev/tmp/mmssms.db");
+                using (var stream = File.OpenRead(localsmsdb))
+                {
+                    using (HttpClient httpClient = new HttpClient(
+                        new HttpClientHandler()
+                        {
+                            Credentials = new NetworkCredential("vinz", @""),
+                            PreAuthenticate = true
+                        })
+                    )
+                    {
+                        try
+                        {
+                            isGood = true;
+                            res = await httpClient.PutAsync(input_url.Text, new StreamContent(stream));
+                            res.EnsureSuccessStatusCode();
+                            msg = "OK";
+                        }
+                        catch (Exception ex)
+                        {
+                            isGood = false;
+                            msg = ex.Message;
+                        }
+
+                    }
+                }
+                btnPushOnly.Text = string.Format("{0} => {1}", isGood, msg);
+
             };
             // coze I can't be bothered
             input_url.Text = @"https://vinznet.net/owncloud/remote.php/webdav/Tmp/x.db";
