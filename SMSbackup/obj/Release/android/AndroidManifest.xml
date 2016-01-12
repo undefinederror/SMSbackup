@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="SMSbackup.SMSbackup" android:versionCode="1" android:versionName="1.0">
-  <!--suppress UsesMinSdkAttributes-->
-  <uses-sdk android:minSdkVersion="16" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="SMSbackup.SMSbackup" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="19" />
+  <uses-permission android:name="android.permission.READ_SMS" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+  <uses-permission android:name="android.permission.READ_LOGS" />
+  <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
   <application android:label="SMSbackup" android:name="mono.android.app.Application" android:allowBackup="true" android:icon="@drawable/icon">
     <activity android:icon="@drawable/icon" android:label="SMSbackup" android:name="md541347d184dbb4562dccd4e86c13fa316.MainActivity">
       <intent-filter>

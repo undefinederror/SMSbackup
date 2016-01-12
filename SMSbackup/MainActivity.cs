@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Net;
+using System.Net.Http;
+using System.IO;
+
 using Android.App;
 using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using System.Net;
+
 
 namespace SMSbackup
 {
@@ -27,12 +31,35 @@ namespace SMSbackup
             Button btnPush = FindViewById<Button>(Resource.Id.btn_pushDB);
             // input_url = FindViewById<TextAlignment> 
             EditText input_url = FindViewById<EditText>(Resource.Id.input_url);
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://whatever.com");
-            btnCheck.Click += delegate {
-                req = GetHttpReq.Create(input_url.Text, "vinz", "");
-                var conn=req.CheckConnection();
-                btnCheck.Text = string.Format("{0} => {1}", conn.Connected, conn.Message);
-                if (!conn.Connected)
+            
+            btnCheck.Click += async delegate {
+                btnCheck.Text = "";
+                HttpResponseMessage res;
+                string msg;
+                bool isGood;
+                using (HttpClient httpClient = new HttpClient(
+                    new HttpClientHandler()
+                    {
+                        Credentials = new NetworkCredential("vinz", @""),
+                        PreAuthenticate = true
+                    })
+                ) {
+                    try
+                    {
+                        isGood = true;
+                        res = await httpClient.GetAsync(input_url.Text);
+                        res.EnsureSuccessStatusCode();
+                        msg = "OK";
+                    }
+                    catch (Exception ex)
+                    {
+                        isGood = false;
+                        msg = ex.Message;
+                    }
+                }
+                
+                btnCheck.Text = string.Format("{0} => {1}", isGood, msg);
+                if (isGood)
                 {
                     btnPush.Visibility = Android.Views.ViewStates.Visible;
                 }
@@ -40,12 +67,54 @@ namespace SMSbackup
                     btnPush.Visibility = Android.Views.ViewStates.Invisible;
                 }
             };
-            btnPush.Click += delegate
+            btnPush.Click += async delegate
             {
-                req = GetHttpReq.Create(input_url.Text, "vinz", "");
-                req.pushDB();
-                
+                btnPush.Text = "";
+                string smsdb = "/data/data/com.android.providers.telephony/databases/mmssms.db";
+                btnPush.Text = "copying db to sdcard";
+                var p = Java.Lang.Runtime.GetRuntime().Exec("su");
+                var os = new Java.IO.DataOutputStream(p.OutputStream);
+                var osRes = new Java.IO.DataInputStream(p.InputStream);
+                var cmd = "cp " + smsdb + " /sdcard/dev/tmp/";
+                os.WriteBytes(cmd + '\n');
+                os.Flush();
+                //string msg = osRes.ReadLine();
+                btnPush.Text = "maybe copied to sdcard";
+
+                HttpResponseMessage res;
+                bool isGood;
+                string msg;
+                string localsmsdb = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.Path, "dev/tmp/mmssms.db");
+                using (var stream = File.OpenRead(localsmsdb))
+                {
+                    using (HttpClient httpClient = new HttpClient(
+                        new HttpClientHandler()
+                        {
+                            Credentials = new NetworkCredential("vinz",@""),
+                            PreAuthenticate = true
+                        })
+                    )
+                    {
+                        try
+                        {
+                            isGood = true;
+                            res = await httpClient.PutAsync(input_url.Text,new StreamContent(stream));
+                            res.EnsureSuccessStatusCode();
+                            msg="OK";
+                        }
+                        catch (Exception ex)
+                        {
+                            isGood = false;
+                            msg = ex.Message;
+                        }
+
+                    }
+                }
+                btnPush.Text = string.Format("{0} => {1}", isGood, msg);
             };
+            // coze I can't be bothered
+            input_url.Text = @"https://vinznet.net/owncloud/remote.php/webdav/Tmp/x.db";
+
         }
     }
 }

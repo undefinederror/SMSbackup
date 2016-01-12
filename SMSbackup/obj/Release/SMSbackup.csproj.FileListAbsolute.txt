@@ -13,3 +13,17 @@ D:\dev\android\SMSbackup\SMSbackup\obj\Release\R.cs.flag
 D:\dev\android\SMSbackup\SMSbackup\obj\Release\uploadflags.txt
 D:\dev\android\SMSbackup\SMSbackup\obj\Release\SMSbackup.dll.mdb
 D:\dev\android\SMSbackup\SMSbackup\bin\Release\SMSbackup.dll.mdb
+D:\dev\Git\SMSbackup\SMSbackup\bin\Release\SMSbackup.dll
+D:\dev\Git\SMSbackup\SMSbackup\bin\Release\SMSbackup.pdb
+D:\dev\Git\SMSbackup\SMSbackup\bin\Release\SMSbackup.SMSbackup.apk
+D:\dev\Git\SMSbackup\SMSbackup\bin\Release\SMSbackup.SMSbackup-Signed.apk
+D:\dev\Git\SMSbackup\SMSbackup\obj\Release\SMSbackup.dll
+D:\dev\Git\SMSbackup\SMSbackup\obj\Release\SMSbackup.pdb
+D:\dev\Git\SMSbackup\SMSbackup\obj\Release\android\bin\SMSbackup.SMSbackup.apk
+D:\dev\Git\SMSbackup\SMSbackup\obj\Release\res\layout\main.xml
+D:\dev\Git\SMSbackup\SMSbackup\obj\Release\res\values\strings.xml
+D:\dev\Git\SMSbackup\SMSbackup\obj\Release\res\drawable\icon.png
+D:\dev\Git\SMSbackup\SMSbackup\obj\Release\R.cs.flag
+D:\dev\Git\SMSbackup\SMSbackup\obj\Release\uploadflags.txt
+D:\dev\Git\SMSbackup\SMSbackup\obj\Release\SMSbackup.dll.mdb
+D:\dev\Git\SMSbackup\SMSbackup\bin\Release\SMSbackup.dll.mdb

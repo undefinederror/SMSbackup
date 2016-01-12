@@ -15,6 +15,7 @@ public final class R {
     }
     public static final class id {
         public static final int btn_checkConnection=0x7f050002;
+        public static final int btn_pushDB=0x7f050003;
         public static final int input_url=0x7f050001;
         public static final int lbl_url=0x7f050000;
     }
@@ -22,7 +23,8 @@ public final class R {
         public static final int main=0x7f030000;
     }
     public static final class string {
-        public static final int ApplicationName=0x7f040001;
+        public static final int ApplicationName=0x7f040002;
         public static final int btn_checkConnection=0x7f040000;
+        public static final int btn_pushDB=0x7f040001;
     }
 }
