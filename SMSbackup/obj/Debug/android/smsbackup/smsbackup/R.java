@@ -18,10 +18,17 @@ public final class R {
         public static final int btn_pushDB=0x7f050003;
         public static final int btn_pushOnly=0x7f050004;
         public static final int btn_settings=0x7f050005;
-        public static final int editText1=0x7f050007;
+        public static final int input_pass=0x7f05000c;
+        public static final int input_serverRoot=0x7f050008;
         public static final int input_url=0x7f050001;
+        public static final int input_user=0x7f05000a;
+        public static final int lbl_connectionResult=0x7f05000e;
+        public static final int lbl_pass=0x7f05000b;
+        public static final int lbl_serverRoot=0x7f050007;
         public static final int lbl_url=0x7f050000;
+        public static final int lbl_user=0x7f050009;
         public static final int linearLayout1=0x7f050006;
+        public static final int loader_checkConnection=0x7f05000d;
     }
     public static final class layout {
         public static final int main=0x7f030000;

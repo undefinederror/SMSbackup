@@ -30,6 +30,7 @@ namespace SMSbackup
             Button btnCheck = FindViewById<Button>(Resource.Id.btn_checkConnection);
             Button btnPush = FindViewById<Button>(Resource.Id.btn_pushDB);
             Button btnPushOnly = FindViewById<Button>(Resource.Id.btn_pushOnly);
+            Button btnSettings = FindViewById<Button>(Resource.Id.btn_settings);
             // input_url = FindViewById<TextAlignment> 
             EditText input_url = FindViewById<EditText>(Resource.Id.input_url);
             
@@ -145,6 +146,13 @@ namespace SMSbackup
                     }
                 }
                 btnPushOnly.Text = string.Format("{0} => {1}", isGood, msg);
+
+            };
+
+            btnSettings.Click += (sender, e)=>
+            {
+                var intent = new Intent(this, typeof(Settings));
+                StartActivity(intent);
 
             };
             // coze I can't be bothered
