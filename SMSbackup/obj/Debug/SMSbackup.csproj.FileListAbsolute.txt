@@ -26,8 +26,6 @@ D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\res\values\strings.xml
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\res\drawable\icon.png
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\R.cs.flag
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\uploadflags.txt
-D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.dll.mdb
-D:\dev\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.dll.mdb
 D:\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.dll
 D:\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.pdb
 D:\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.SMSbackup.apk
@@ -44,3 +42,6 @@ D:\Git\SMSbackup\SMSbackup\obj\Debug\uploadflags.txt
 D:\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.csprojResolveAssemblyReference.cache
 D:\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.dll.mdb
 D:\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.dll.mdb
+D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\res\layout\settings.xml
+D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.dll.mdb
+D:\dev\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.dll.mdb

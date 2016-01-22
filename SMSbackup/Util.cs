@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net.Http;
+using System.Net;
+using System.Threading.Tasks;
 
 using Android.App;
 using Android.Content;
@@ -9,9 +12,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using System.Net.Http;
-using System.Net;
-using System.Threading.Tasks;
+using Android.Views.InputMethods;
+
 
 namespace SMSbackup.Util
 {
@@ -49,11 +51,11 @@ namespace SMSbackup.Util
                 }
             }
         }
-
+        public static void hideSoftKeyboard(Activity activity)
+        {
+            InputMethodManager inputMethodManager = (InputMethodManager)activity.GetSystemService(Activity.InputMethodService);
+            inputMethodManager.HideSoftInputFromWindow(activity.CurrentFocus.WindowToken, 0);
+        }
     }
-    public static void hideSoftKeyboard(Activity activity)
-    {
-        InputMethodManager inputMethodManager = (InputMethodManager)activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
-    }
+    
 }
