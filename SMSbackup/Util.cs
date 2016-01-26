@@ -29,7 +29,9 @@ namespace SMSbackup.Util
 
         }
     }
-    public abstract class Do {
+
+    public abstract class Do
+    {
         public async static Task<ConnectionResponse> CheckConnection(string url, string user, string pass)
         {
             var handler = new HttpClientHandler()
@@ -51,10 +53,14 @@ namespace SMSbackup.Util
                 }
             }
         }
-        public static void hideSoftKeyboard(Activity activity)
+        public static void HideSoftKeyboard(Activity activity)
         {
             InputMethodManager inputMethodManager = (InputMethodManager)activity.GetSystemService(Activity.InputMethodService);
             inputMethodManager.HideSoftInputFromWindow(activity.CurrentFocus.WindowToken, 0);
+        }
+        public static ISharedPreferences GetPreferences(Context context, string key)
+        {
+            return context.GetSharedPreferences(key, 0);
         }
     }
     

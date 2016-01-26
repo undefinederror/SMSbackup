@@ -22,7 +22,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/input_serverRoot" />
+        android:id="@+id/input_serverRoot"
+        android:inputType="textUri" />
     <TextView
         android:text="@string/lbl_user"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -43,12 +44,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/input_pass"
-        android:password="true" />
+        android:inputType="textPassword" />
     <Button
         android:text="@string/btn_checkConnection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_checkConnection" />
+        android:id="@+id/btn_checkConnection"
+        android:textAllCaps="true" />
     <ProgressBar
         style="?android:attr/progressBarStyleSmall"
         android:layout_width="match_parent"
@@ -62,4 +64,40 @@
         android:layout_height="wrap_content"
         android:id="@+id/lbl_connectionResult"
         android:visibility="invisible" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/space1"
+        android:layout_marginBottom="13.0dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_success"
+        android:visibility="visible">
+        <TextView
+            android:text="@string/lbl_dbFile"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbl_dbFile" />
+        <EditText
+            android:inputType="textUri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_filepath" />
+        <Button
+            android:text="@string/btn_saveSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_saveSetting"
+            android:textAllCaps="true" />
+        <TextView
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbl_saveResult"
+            android:visibility="invisible" />
+    </LinearLayout>
 </LinearLayout>

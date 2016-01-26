@@ -17,7 +17,6 @@ D:\dev\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.dll
 D:\dev\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.pdb
 D:\dev\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.SMSbackup.apk
 D:\dev\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.SMSbackup-Signed.apk
-D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.csprojResolveAssemblyReference.cache
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.dll
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.pdb
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\android\bin\SMSbackup.SMSbackup.apk
@@ -43,5 +42,6 @@ D:\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.csprojResolveAssemblyReference.ca
 D:\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.dll.mdb
 D:\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.dll.mdb
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\res\layout\settings.xml
+D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.csprojResolveAssemblyReference.cache
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.dll.mdb
 D:\dev\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.dll.mdb

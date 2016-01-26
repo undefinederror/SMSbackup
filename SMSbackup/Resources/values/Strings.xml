@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="prefs_key">myapp_prefs</string>
   <string name="btn_checkConnection">Check Connection</string>
   <string name="btn_pushDB">Push SMS db</string>
   <string name="ApplicationName">SMSbackup</string>
@@ -7,4 +8,7 @@
   <string name="lbl_serverRoot">WEBDAV root address</string>
   <string name="lbl_user">username</string>
   <string name="lbl_pass">password</string>
+  <string name="lbl_dbFile">backup path (relative to WEBDAV root)</string>
+  <string name="btn_saveSetting">save settings</string>
+  
 </resources>
