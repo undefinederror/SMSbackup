@@ -34,10 +34,17 @@ namespace SMSbackup.Util
     {
         public async static Task<ConnectionResponse> CheckConnection(string url, string user, string pass)
         {
+            //var handler = new ModernHttpClient.NativeMessageHandler()
+            //{
+            //    Credentials = new NetworkCredential(user, pass),
+            //    PreAuthenticate = true,
+            //    AllowAutoRedirect = true
+            //};
             var handler = new HttpClientHandler()
             {
                 Credentials = new NetworkCredential(user, pass),
-                PreAuthenticate = true
+                PreAuthenticate = true,
+                AllowAutoRedirect = true
             };
             using (var client = new HttpClient(handler))
             {

@@ -9,11 +9,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-
+using Android.Content.PM;
 
 namespace SMSbackup
 {
-    [Activity(Label = "SMSbackup", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "SMSbackup", MainLauncher = true, Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : Activity
     {
         string rootUrl;

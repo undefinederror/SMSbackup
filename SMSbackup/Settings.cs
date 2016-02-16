@@ -10,10 +10,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
+using Android.Content.PM;
 
 namespace SMSbackup
 {
-    [Activity(Label = "@string/btn_settings", Icon = "@drawable/icon")]
+    [Activity(Label = "@string/btn_settings", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class Settings : Activity
     {
         EditText input_server; 

@@ -39,9 +39,12 @@ D:\Git\SMSbackup\SMSbackup\obj\Debug\res\drawable\icon.png
 D:\Git\SMSbackup\SMSbackup\obj\Debug\R.cs.flag
 D:\Git\SMSbackup\SMSbackup\obj\Debug\uploadflags.txt
 D:\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.csprojResolveAssemblyReference.cache
-D:\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.dll.mdb
-D:\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.dll.mdb
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\res\layout\settings.xml
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.csprojResolveAssemblyReference.cache
 D:\dev\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.dll.mdb
 D:\dev\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.dll.mdb
+D:\Git\SMSbackup\SMSbackup\bin\Debug\ModernHttpClient.dll
+D:\Git\SMSbackup\SMSbackup\bin\Debug\OkHttp.dll
+D:\Git\SMSbackup\SMSbackup\bin\Debug\ModernHttpClient.dll.mdb
+D:\Git\SMSbackup\SMSbackup\obj\Debug\SMSbackup.dll.mdb
+D:\Git\SMSbackup\SMSbackup\bin\Debug\SMSbackup.dll.mdb

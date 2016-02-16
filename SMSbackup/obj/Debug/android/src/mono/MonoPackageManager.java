@@ -80,6 +80,8 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"SMSbackup.dll",
+		"ModernHttpClient.dll",
+		"OkHttp.dll",
 		"System.ServiceModel.Internals.dll",
 	};
 	public static final String[] Dependencies = new String[]{
